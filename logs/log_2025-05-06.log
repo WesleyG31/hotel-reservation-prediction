@@ -1,0 +1,13 @@
+2025-05-06 09:57:15,667 - INFO - YAML file config/config.yaml read successfully.
+2025-05-06 09:57:15,668 - INFO - Data Ingestion started with hotel_prediction and file is Hotel_Reservations.csv
+2025-05-06 09:57:15,668 - INFO - Starting data ingestion process
+2025-05-06 09:57:15,669 - ERROR - Error downloading file from GCP bucket
+2025-05-06 09:57:15,669 - INFO - Data ingestion process finished
+2025-05-06 10:02:16,921 - INFO - YAML file config/config.yaml read successfully.
+2025-05-06 10:02:16,921 - INFO - Data Ingestion started with hotel_prediction and file is Hotel_Reservations.csv
+2025-05-06 10:02:16,921 - INFO - Starting data ingestion process
+2025-05-06 10:02:18,723 - INFO - File downloaded from GCP bucket hotel_prediction to artifacts/raw\raw.csv
+2025-05-06 10:02:18,723 - INFO - Splitting data into train and test sets
+2025-05-06 10:02:18,911 - INFO - Train and test data saved to artifacts/raw\train.csv and artifacts/raw\test.csv respectively
+2025-05-06 10:02:18,914 - INFO - Data ingestion process completed successfully
+2025-05-06 10:02:18,914 - INFO - Data ingestion process finished
