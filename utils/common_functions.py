@@ -18,3 +18,13 @@ def read_yaml(file_path):
     except Exception as e:
         logger.error("Error reading YAML file")
         raise CustomException ("Error reading YAML file", e)
+    
+
+def load_data(path):
+    try:
+        logger.info(f"Loading data from {path}")
+        return pd.read_csv(path)
+    except Exception as e:
+        logger.error(f"Error loading data from {path}")
+        raise CustomException(f"Error loading data from {path}", e)
+    
