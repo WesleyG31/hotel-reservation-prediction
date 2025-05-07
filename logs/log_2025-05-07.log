@@ -1,103 +1,73 @@
-2025-05-07 15:41:17,622 - INFO - YAML file config/config.yaml read successfully.
-2025-05-07 15:41:17,623 - INFO - loading data from RAW directory
-2025-05-07 15:41:17,623 - INFO - Loading data from artifacts/raw\train.csv
-2025-05-07 15:41:17,663 - INFO - Loading data from artifacts/raw\test.csv
-2025-05-07 15:41:17,694 - INFO - Starting data preprocessing...      Booking_ID  no_of_adults  ...  no_of_special_requests  booking_status
-0       INN25630             2  ...                       0    Not_Canceled
-1       INN14474             2  ...                       2    Not_Canceled
-2       INN23721             2  ...                       0        Canceled
-3       INN05844             2  ...                       0    Not_Canceled
-4       INN18710             1  ...                       0        Canceled
-...          ...           ...  ...                     ...             ...
-29015   INN16851             2  ...                       2    Not_Canceled
-29016   INN06266             1  ...                       0        Canceled
-29017   INN11285             2  ...                       1    Not_Canceled
-29018   INN00861             2  ...                       0        Canceled
-29019   INN15796             2  ...                       0    Not_Canceled
-
-[29020 rows x 19 columns]
-2025-05-07 15:41:17,694 - INFO - Dropping unnecessary columns...
-2025-05-07 15:41:17,696 - INFO - Dropped duplicate rows.
-2025-05-07 15:41:17,707 - INFO - Categorical and numerical columns...
-2025-05-07 15:41:17,707 - INFO - Applying label encoding to categorical columns...
-2025-05-07 15:41:17,717 - INFO - Labels mappings are: 
-2025-05-07 15:41:17,717 - ERROR - Error during preprocess local variable 'mapping' referenced before assignment
-2025-05-07 15:41:17,717 - ERROR - Error while preprocess pipeline CustomException.__init__() missing 1 required positional argument: 'error_detail'
-2025-05-07 15:45:09,738 - INFO - YAML file config/config.yaml read successfully.
-2025-05-07 15:45:09,739 - INFO - loading data from RAW directory
-2025-05-07 15:45:09,739 - INFO - Loading data from artifacts/raw\train.csv
-2025-05-07 15:45:09,770 - INFO - Loading data from artifacts/raw\test.csv
-2025-05-07 15:45:09,779 - INFO - Starting data preprocessing...
-2025-05-07 15:45:09,779 - INFO - Dropping unnecessary columns...
-2025-05-07 15:45:09,781 - INFO - Dropped duplicate rows.
-2025-05-07 15:45:09,789 - INFO - Categorical and numerical columns...
-2025-05-07 15:45:09,790 - INFO - Applying label encoding to categorical columns...
-2025-05-07 15:45:09,798 - INFO - Labels mappings are: 
-2025-05-07 15:45:09,798 - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
-2025-05-07 15:45:09,799 - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
-2025-05-07 15:45:09,799 - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
-2025-05-07 15:45:09,799 - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
-2025-05-07 15:45:09,799 - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
-2025-05-07 15:45:09,799 - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
-2025-05-07 15:45:09,799 - INFO - Skewness handling
-2025-05-07 15:45:09,801 - INFO - Starting data preprocessing...
-2025-05-07 15:45:09,801 - INFO - Dropping unnecessary columns...
-2025-05-07 15:45:09,801 - INFO - Dropped duplicate rows.
-2025-05-07 15:45:09,804 - INFO - Categorical and numerical columns...
-2025-05-07 15:45:09,804 - INFO - Applying label encoding to categorical columns...
-2025-05-07 15:45:09,807 - INFO - Labels mappings are: 
-2025-05-07 15:45:09,807 - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
-2025-05-07 15:45:09,807 - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
-2025-05-07 15:45:09,807 - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
-2025-05-07 15:45:09,807 - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
-2025-05-07 15:45:09,807 - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
-2025-05-07 15:45:09,807 - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
-2025-05-07 15:45:09,807 - INFO - Skewness handling
-2025-05-07 15:45:09,809 - INFO - Handling Imbalanced data
-2025-05-07 15:45:11,402 - INFO - Data balanced succesfully
-2025-05-07 15:45:11,404 - INFO - Stating feature selection
-2025-05-07 15:45:11,407 - INFO - RandomForest starting...
-2025-05-07 15:45:14,348 - INFO - Selecting features
-2025-05-07 15:45:14,366 - ERROR - Error while feature selection unhashable type: 'list'
-2025-05-07 15:45:14,366 - ERROR - Error while preprocess pipeline 'TypeError' object has no attribute 'exc_info'
-2025-05-07 15:59:19,012 - INFO - YAML file config/config.yaml read successfully.
-2025-05-07 15:59:19,012 - INFO - loading data from RAW directory
-2025-05-07 15:59:19,012 - INFO - Loading data from artifacts/raw\train.csv
-2025-05-07 15:59:19,045 - INFO - Loading data from artifacts/raw\test.csv
-2025-05-07 15:59:19,054 - INFO - Starting data preprocessing...
-2025-05-07 15:59:19,054 - INFO - Dropping unnecessary columns...
-2025-05-07 15:59:19,056 - INFO - Dropped duplicate rows.
-2025-05-07 15:59:19,065 - INFO - Categorical and numerical columns...
-2025-05-07 15:59:19,066 - INFO - Applying label encoding to categorical columns...
-2025-05-07 15:59:19,076 - INFO - Labels mappings are: 
-2025-05-07 15:59:19,076 - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
-2025-05-07 15:59:19,076 - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
-2025-05-07 15:59:19,076 - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
-2025-05-07 15:59:19,076 - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
-2025-05-07 15:59:19,076 - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
-2025-05-07 15:59:19,076 - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
-2025-05-07 15:59:19,076 - INFO - Skewness handling
-2025-05-07 15:59:19,079 - INFO - Starting data preprocessing...
-2025-05-07 15:59:19,079 - INFO - Dropping unnecessary columns...
-2025-05-07 15:59:19,080 - INFO - Dropped duplicate rows.
-2025-05-07 15:59:19,084 - INFO - Categorical and numerical columns...
-2025-05-07 15:59:19,084 - INFO - Applying label encoding to categorical columns...
-2025-05-07 15:59:19,088 - INFO - Labels mappings are: 
-2025-05-07 15:59:19,088 - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
-2025-05-07 15:59:19,088 - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
-2025-05-07 15:59:19,089 - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
-2025-05-07 15:59:19,089 - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
-2025-05-07 15:59:19,089 - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
-2025-05-07 15:59:19,089 - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
-2025-05-07 15:59:19,089 - INFO - Skewness handling
-2025-05-07 15:59:19,090 - INFO - Handling Imbalanced data
-2025-05-07 15:59:20,572 - INFO - Data balanced succesfully
-2025-05-07 15:59:20,573 - INFO - Stating feature selection
-2025-05-07 15:59:20,576 - INFO - RandomForest starting...
-2025-05-07 15:59:23,518 - INFO - Selecting features
-2025-05-07 15:59:23,536 - INFO - Feature selection completed succesfully
-2025-05-07 15:59:23,544 - INFO - Saving data in artifacts/preprocessed\train_data.csv
-2025-05-07 15:59:23,626 - INFO - Data Saved Succesfully in artifacts/preprocessed\train_data.csv
-2025-05-07 15:59:23,626 - INFO - Saving data in artifacts/preprocessed\test_data.csv
-2025-05-07 15:59:23,702 - INFO - Data Saved Succesfully in artifacts/preprocessed\test_data.csv
-2025-05-07 15:59:23,703 - INFO - Data processing Completed Successfully
+2025-05-07 17:48:56,318 - INFO - YAML file config/config.yaml read successfully.
+2025-05-07 17:48:56,318 - INFO - Data Ingestion started with hotel_prediction and file is Hotel_Reservations.csv
+2025-05-07 17:48:56,319 - INFO - Starting data ingestion process
+2025-05-07 17:49:00,368 - INFO - File downloaded from GCP bucket hotel_prediction to artifacts/raw\raw.csv
+2025-05-07 17:49:00,369 - INFO - Splitting data into train and test sets
+2025-05-07 17:49:00,702 - INFO - Train and test data saved to artifacts/raw\train.csv and artifacts/raw\test.csv respectively
+2025-05-07 17:49:00,705 - INFO - Data ingestion process completed successfully
+2025-05-07 17:49:00,705 - INFO - Data ingestion process finished
+2025-05-07 17:49:00,709 - INFO - YAML file config/config.yaml read successfully.
+2025-05-07 17:49:00,709 - INFO - loading data from RAW directory
+2025-05-07 17:49:00,709 - INFO - Loading data from artifacts/raw\train.csv
+2025-05-07 17:49:00,773 - INFO - Loading data from artifacts/raw\test.csv
+2025-05-07 17:49:00,798 - INFO - Starting data preprocessing...
+2025-05-07 17:49:00,799 - INFO - Dropping unnecessary columns...
+2025-05-07 17:49:00,802 - INFO - Dropped duplicate rows.
+2025-05-07 17:49:00,819 - INFO - Categorical and numerical columns...
+2025-05-07 17:49:00,820 - INFO - Applying label encoding to categorical columns...
+2025-05-07 17:49:00,836 - INFO - Labels mappings are: 
+2025-05-07 17:49:00,836 - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+2025-05-07 17:49:00,836 - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2025-05-07 17:49:00,836 - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+2025-05-07 17:49:00,836 - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+2025-05-07 17:49:00,836 - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2025-05-07 17:49:00,836 - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+2025-05-07 17:49:00,836 - INFO - Skewness handling
+2025-05-07 17:49:00,841 - INFO - Starting data preprocessing...
+2025-05-07 17:49:00,841 - INFO - Dropping unnecessary columns...
+2025-05-07 17:49:00,842 - INFO - Dropped duplicate rows.
+2025-05-07 17:49:00,847 - INFO - Categorical and numerical columns...
+2025-05-07 17:49:00,847 - INFO - Applying label encoding to categorical columns...
+2025-05-07 17:49:00,853 - INFO - Labels mappings are: 
+2025-05-07 17:49:00,854 - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+2025-05-07 17:49:00,854 - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2025-05-07 17:49:00,854 - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+2025-05-07 17:49:00,854 - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+2025-05-07 17:49:00,854 - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2025-05-07 17:49:00,854 - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+2025-05-07 17:49:00,854 - INFO - Skewness handling
+2025-05-07 17:49:00,857 - INFO - Handling Imbalanced data
+2025-05-07 17:49:02,686 - INFO - Data balanced succesfully
+2025-05-07 17:49:02,690 - INFO - Stating feature selection
+2025-05-07 17:49:02,700 - INFO - RandomForest starting...
+2025-05-07 17:49:07,011 - INFO - Selecting features
+2025-05-07 17:49:07,034 - INFO - Feature selection completed succesfully
+2025-05-07 17:49:07,045 - INFO - Saving data in artifacts/preprocessed\train_data.csv
+2025-05-07 17:49:07,135 - INFO - Data Saved Succesfully in artifacts/preprocessed\train_data.csv
+2025-05-07 17:49:07,135 - INFO - Saving data in artifacts/preprocessed\test_data.csv
+2025-05-07 17:49:07,221 - INFO - Data Saved Succesfully in artifacts/preprocessed\test_data.csv
+2025-05-07 17:49:07,221 - INFO - Data processing Completed Successfully
+2025-05-07 17:49:07,822 - INFO - STARTING MODEL TRAINING PIPELINE
+2025-05-07 17:49:07,823 - INFO - ML FLOW STARTED
+2025-05-07 17:49:07,823 - INFO - LOGGING THE TRAINING AND TESTING DATASET TO MLFLOW
+2025-05-07 17:49:07,841 - INFO - Load and Split data Starting...artifacts/preprocessed\train_data.csv
+2025-05-07 17:49:07,841 - INFO - Loading data from artifacts/preprocessed\train_data.csv
+2025-05-07 17:49:07,861 - INFO - Load and Split data Starting...artifacts/preprocessed\test_data.csv
+2025-05-07 17:49:07,862 - INFO - Loading data from artifacts/preprocessed\test_data.csv
+2025-05-07 17:49:07,884 - INFO - Data splitted successfully
+2025-05-07 17:49:07,884 - INFO - initializing model
+2025-05-07 17:49:07,884 - INFO - Tuning Hyperparameters
+2025-05-07 17:49:07,884 - INFO - Starting Model TRAINING with Hyperparameters
+2025-05-07 17:49:46,940 - INFO - TRAINING Completed
+2025-05-07 17:49:46,940 - INFO - Best parameters are: {'boosting_type': 'dart', 'learning_rate': np.float64(0.15052794658717492), 'max_depth': 41, 'n_estimators': 320, 'num_leaves': 47}
+2025-05-07 17:49:46,940 - INFO - We have the model trained
+2025-05-07 17:49:46,940 - INFO - Evaluating the model
+2025-05-07 17:49:47,081 - INFO - Accuracy Score: 0.9078524062766726
+2025-05-07 17:49:47,082 - INFO - Precision: 0.900670794633643
+2025-05-07 17:49:47,082 - INFO - Recall : 0.9168143917011359
+2025-05-07 17:49:47,082 - INFO - F1 Score: 0.9086708963722141
+2025-05-07 17:49:47,082 - INFO - Saving the model...
+2025-05-07 17:49:47,115 - INFO - MODEL SAVED
+2025-05-07 17:49:47,116 - INFO - LOGGIN THE MODEL WITH MLFLOW AND BEST PARAMS
+2025-05-07 17:49:47,161 - INFO - LOGGIN METRICS WITH MLFLOW
+2025-05-07 17:49:47,168 - INFO - MODEL TRAINING PIPELINE COMPLETED SUCCESSFULLY

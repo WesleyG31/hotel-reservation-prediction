@@ -22,8 +22,11 @@ class DataIngestion:
     
     def download_csv_from_gcp(self):
         try: 
+            # set GOOGLE_APPLICATION_CREDENTIALS=C:\All files\hotel_reservation_prediction\hotelprediction-c5b2fad92d6f.json
             client= storage.Client()
+
             bucket=client.bucket(self.bucket_name)
+
             blob=bucket.blob(self.bucket_file_name)
             
             blob.download_to_filename(raw_file_path)
@@ -31,7 +34,7 @@ class DataIngestion:
             logger.info(f"File downloaded from GCP bucket {self.bucket_name} to {raw_file_path}")
             
         except Exception as e:
-            logger.error("Error downloading file from GCP bucket")
+            logger.error(f"Error downloading file from GCP bucket {e}")
             raise CustomException("Failed to download csv file", e)
         
     def split_data(self):
@@ -46,7 +49,7 @@ class DataIngestion:
             logger.info(f"Train and test data saved to {train_file_path} and {test_file_path} respectively")
         
         except Exception as e:
-            logger.error("Error splitting data into train and test sets")
+            logger.error(f"Error splitting data into train and test sets {e}")
             raise CustomException("Failed to split data", e)
         
     def run(self):

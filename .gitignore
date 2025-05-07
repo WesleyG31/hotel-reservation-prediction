@@ -1,3 +1,4 @@
 Hotel_reservation_prediction.egg-info/
 *.json
 *.csv
+mlruns/
